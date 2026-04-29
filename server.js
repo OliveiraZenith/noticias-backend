@@ -70,10 +70,10 @@ app.post("/noticias", (req, res) => {
   res.status(201).json({ mensagem: "Notícia criada", noticia: novaNoticia });
 });
 
-// Health check
+// GET / — saúde da API e informações de versão
 app.get("/", (req, res) => {
   res.json({
-    status: "Backend de Notícias rodando com CI/CD",
+    status: "API REST de notícias em funcionamento (CI/CD ativo)",
     versao: "1.0.1",
     cors_ativo: true,
     frontend_integrado: true
